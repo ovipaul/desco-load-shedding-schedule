@@ -22,8 +22,8 @@ mycursor.execute("select * from users")
 users = mycursor.fetchall()
 users = pd.DataFrame(users, index=None, columns = ['ID','name','email','location','created_at'])
 
-name = 'Davis'
-email = 'davis@gmail.com'
+name = input('Enter Name:')
+email = input('Enter Email:')
 
 usr_data = users.loc[users['name'] == name]
 e_check=usr_data.loc[:,"email"].values[0]
